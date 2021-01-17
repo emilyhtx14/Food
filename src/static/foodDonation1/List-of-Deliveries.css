@@ -1,0 +1,128 @@
+.u-section-1 .u-sheet-1 {
+  min-height: 498px;
+}
+
+.u-section-1 .u-text-1 {
+  margin: 24px 536px 0 0;
+}
+
+.u-section-1 .u-custom-html-1 {
+  min-height: 97px;
+  margin: 24px 507px 0 63px;
+}
+
+.u-section-1 .u-custom-html-2 {
+  min-height: 97px;
+  margin: -97px -49px 0 619px;
+}
+
+.u-section-1 .u-custom-html-3 {
+  min-height: 97px;
+  margin: 24px 507px 0 63px;
+}
+
+.u-section-1 .u-custom-html-4 {
+  min-height: 97px;
+  margin: -97px -49px 0 619px;
+}
+
+.u-section-1 .u-custom-html-5 {
+  min-height: 97px;
+  margin: 34px 507px 60px 63px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-text-1 {
+    margin-right: 336px;
+  }
+
+  .u-section-1 .u-custom-html-1 {
+    height: auto;
+    margin-right: 370px;
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-custom-html-2 {
+    height: auto;
+    margin-left: 519px;
+  }
+
+  .u-section-1 .u-custom-html-3 {
+    height: auto;
+    margin-right: 370px;
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-custom-html-4 {
+    height: auto;
+    margin-left: 519px;
+  }
+
+  .u-section-1 .u-custom-html-5 {
+    height: auto;
+    margin-right: 370px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-text-1 {
+    margin-right: 116px;
+  }
+
+  .u-section-1 .u-custom-html-1 {
+    margin-right: 150px;
+  }
+
+  .u-section-1 .u-custom-html-2 {
+    margin-left: 409px;
+  }
+
+  .u-section-1 .u-custom-html-3 {
+    margin-right: 150px;
+  }
+
+  .u-section-1 .u-custom-html-4 {
+    margin-left: 409px;
+  }
+
+  .u-section-1 .u-custom-html-5 {
+    margin-right: 150px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-text-1 {
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-custom-html-1 {
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-custom-html-2 {
+    margin-left: 319px;
+  }
+
+  .u-section-1 .u-custom-html-3 {
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-custom-html-4 {
+    margin-left: 319px;
+  }
+
+  .u-section-1 .u-custom-html-5 {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-custom-html-2 {
+    margin-left: 219px;
+  }
+
+  .u-section-1 .u-custom-html-4 {
+    margin-left: 219px;
+  }
+}

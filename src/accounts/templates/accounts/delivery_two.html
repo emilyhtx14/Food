@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!--
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1> delivery two </h1>
+    <br> Goal Amount: {{ goal_amount }}
+    <br> Current Amount: {{ current_amount }}
+    <br> Inventory Placeholder
+    {{ form.as_p }}
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+{% load static %}
+{%  load my_templatetag %}
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="FoodSavers">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Donate page</title>
+
+    <link rel="stylesheet" href="{% static "foodDonation1/nicepage.css" %}" media="screen">
+
+    <link rel="stylesheet" href="{% static "foodDonation1/Donate-page.css" %}" media="screen">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <script class="u-script" type="text/javascript" src="{% static "foodDonation1/jquery.js" %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static "foodDonation1/nicepage.js" %}" defer=""></script>
+
+    <meta name="generator" content="Nicepage 3.3.3, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?
+    family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "foodSavers",
+		"url": "index.html"
+}</script>
+    <meta property="og:title" content="Donate page">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#478ac9">
+    <link rel="canonical" href="index.html">
+    <meta property="og:url" content="index.html">
+  </head>
+  <body class="u-body"><header class="u-clearfix u-header u-header" id="sec-e236"><div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-text u-text-palette-1-base u-text-1">
+            <br>
+            <br>
+          <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="https://hackdavis.io/">FoodSavers Donation Page</a>
+        </h2>
+        <a href="profile" data-page-id="38178821" class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-palette-1-base u-btn-2"><span style="font-weight: 700;font-family:'Poiret One','Lobster', cursive;">Home </span>
+        </a>
+      <a href="userview" data-page-id="38178821" class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-palette-1-base u-btn-3"><span style="font-weight: 800;font-family:'Poiret One', cursive;">Profile: {{username}}</span></a>
+      </div></header>
+    <section class="u-clearfix u-section-1" id="sec-1e82">
+      <div class="u-clearfix u-sheet u-sheet-1">
+          <br>
+        <h3 class="u-text u-text-1">Trader Joe's
+            <br> 885 Russell Blvd, Davis, CA 95616</h3><span style="font-weight: 700;font-family:'Poiret One','Lobster', cursive;">
+        <h3 class="u-text u-text-2">Delivery Information for Jan 17th, 2021 </h3>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-2" id="sec-e800">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-text u-text-palette-1-base u-text-1">Progress</h2>
+        <p2>
+
+            <br>
+            ${{ current_amount }} Raised
+            <br>
+
+        </p2>
+
+          <style>
+              p2{
+                    text-align:left;
+                    font-size:25px;
+                    font-family:"Poiret One",Lobster, "Baskerville Old Face";
+              }
+          </style>
+        <div class="u-clearfix u-custom-html u-custom-html-1">
+          <label for="file">
+            <progress id="file" value={{ current_amount|divide:goal_amount }} max="100"> 50% </progress>
+          </label>
+            <style>
+                #file{
+                    font-size: small;
+                }
+            </style>
+        </div>
+        <p class="u-small-text u-text u-text-font u-text-variant u-text-3"></p>
+        <p id ="yes">${{ goal_amount }} Goal</p>
+        <h2 class="u-text u-text-palette-1-base u-text-5">Donate Here!</h2>
+        <div class="u-clearfix u-custom-html u-custom-html-2">
+            <form action = "" method = "POST" >
+                {% csrf_token %}
+                <p> Enter your username for additional confirmation! </p>
+                {{ form.user}}
+
+                <p> Which Supermarket do you shop at?
+                </p>
+                {{ form.supermarket }}
+
+                <p> List the delivery date!
+                    </p>
+
+                {{ form.delivery_date }}
+                <p> How much would you like to donate?
+                </p>
+
+                {{ form.amount }}
+                <br>
+                <br>
+                <br><input type="submit" name = "Submit">
+                <br>
+                </form>
+            <br>
+            <br>
+            <style>
+                p#yes{
+                    text-align:left;
+                    font-size:30px;
+                    font-family:"Poiret One",Lobster, cursive;
+                }
+                p{
+                    text-align:center;
+                }
+                h2{
+                    font-family:'Poiret One','Lobster';
+                }
+                h{
+                    font-family:'Poiret One','Lobster';
+                }
+                form{
+
+                    text-align:center;
+                    width: 100%;
+                    background-color: #ece1f5;
+                    font-weight:500;
+                    border-radius: 20px;
+                    border-width: thick;
+                    font-family:'Poiret One','Lobster';
+                    font-size: 20px;
+                }
+</style>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-3" id="sec-8fca">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-list u-repeater u-list-1">
+          <div class="u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-1">
+              <img alt="" class="u-expanded-width u-image u-image-default u-image-1" src="{% static "foodDonation1/ScreenShot2021-01-17at8.01.36PM.png" %}">
+              <h3 class="u-text u-text-1">Dairy</h3>
+              <div class="u-border-1 u-border-grey-dark-1 u-expanded-width u-line u-line-horizontal u-line-1"></div>
+              <p class="u-text u-text-2">100 u&nbsp; &nbsp;<br>*50 u
+              </p>
+            </div>
+          </div>
+          <div class="u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-2">
+
+              <img alt="" class="u-expanded-width u-image u-image-default u-image-2" src="{% static "foodDonation1/ScreenShot2021-01-17at8.01.40PM.png" %}">
+              <h3 class="u-text u-text-3">Cans</h3>
+              <div class="u-border-1 u-border-grey-dark-1 u-expanded-width u-line u-line-horizontal u-line-2"></div>
+              <p class="u-text u-text-4">50 u&nbsp;<br>*20 u
+              </p>
+            </div>
+          </div>
+          <div class="u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-3">
+
+              <img alt="" class="u-expanded-width u-image u-image-default u-image-3" src="{% static "foodDonation1/ScreenShot2021-01-17at8.01.46PM.png" %}">
+              <h3 class="u-text u-text-5">Produce</h3>
+              <div class="u-border-1 u-border-grey-dark-1 u-expanded-width u-line u-line-horizontal u-line-3"></div>
+              <p class="u-text u-text-6">70 u<br>*60 u
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+         <br>
+        <h2 class="u-text u-text-palette-1-base u-text-7">Inventory</h2>
+
+      </div>
+
+    </section>
+
+  </body>
+<style>
+    #sec-e236{
+        background-image: url("https://wallpaperaccess.com/full/1372156.jpg");
+    }
+
+</style>
+
+</html>

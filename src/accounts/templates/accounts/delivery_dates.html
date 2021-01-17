@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+{% load static %}
+{%  load my_templatetag %}
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Future deliveries for Trader Joe's:">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>List of Deliveries</title>
+    <link rel="stylesheet" href="{%  static "foodDonation1nicepage.css" %}" media="screen">
+    <link rel="stylesheet" href="{% static "foodDonation1/List-of-Deliveries.css"%}" media="screen">
+    <script class="u-script" type="text/javascript" src="{% static "foodDonation1/jquery.js" %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static "foodDonation1/nicepage.js" %}"defer=""></script>
+    <meta name="generator" content="Nicepage 3.3.3, nicepage.com">
+      <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300
+    ,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+
+
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"url": "index.html"
+}</script>
+    <meta property="og:title" content="List of Deliveries">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#478ac9">
+    <link rel="canonical" href="index.html">
+    <meta property="og:url" content="index.html">
+  </head>
+
+<body class="u-body"><header class="u-clearfix u-header u-header" id="sec-28d3"><div class="u-clearfix u-sheet u-sheet-1">
+
+<!-- delivery maps the {delivery date: [total donation amt., total goal amt.]} -->
+        <h3 class="u-text u-text-palette-1-base u-text-1">
+          <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1"
+             href="https://www.google.com/maps/place/Trader+Joe's/@38.5501343,-121.7499292,11.44z/data=!3m1!5s0x808529ab8fb6cec7:
+             0xead60e5691fc64dc!4m8!1m2!2m1!1ssupermarkets+near+uc+davis!3m4!1s0x808529a96442a3dd
+             :0x5d50ca121a637c80!8m2!3d38.5467319!4d-121.7614861?hl=en-CN">FoodSavers</a>
+        </h3>
+        <a href="https://hackdavis.io/" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-2">Home</a>
+        <a href="https://hackdavis.io/" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-3">Profile-{{ username }}</a>
+      </div></header>
+    <section class="u-clearfix u-section-1" id="sec-48c6">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 >Future deliveries for Trader Joe's:</h2>
+        <style>
+            h2 {
+                font-family:'Poiret One','Lobster';
+                font-size: 80px;
+                font-weight: 500;
+            }
+        </style>
+
+        <div class="u-clearfix u-custom-html u-custom-html-1">
+              {% for key,val in amt.items %}
+                    {% for key1, val1 in cost.items %}
+                        {% if key == key1 %}
+                            <br>
+                            <br>
+                            <h5>Date: {{ key }}</h5> <br>
+                            <form action="http://localhost:4000/accounts/delivery2">
+                                <input type="submit" id = 'leave' value="Go to Delivery Date" />
+                            </form>
+                            <style>
+                                #leave {
+                                    text-align: left;
+                                    width: 50%;
+                                    background-color: #ece1f5;
+                                    font-weight: 500;
+                                    border-radius: 20px;
+                                    font-family: 'Poiret One', 'Lobster';
+                                    font-size: 40px;
+                                }
+                                h5{
+                                    font-family:'Poiret One','Lobster';
+                                    font-size: 40px;
+                                    font-weight: 500;
+                                }
+                            }
+                            </style>
+                            <p1>
+                                <br>Cumulative Amount Achieved By All Users: ${{ val }}
+                                <br>Goal Amount: ${{ val1 }}
+                                <br>
+                                 <label for="file">Progress:</label>
+                                 <progress id="file" value={{ val|divide:val1 }} max="100"> 80% </progress>
+                            <br>
+                            </p1>
+                            <style>
+                                p1{
+                                        font-family:'Poiret One','Lobster';
+                                        font-size: 40px;
+                                        font-weight: 500;
+                                    }
+                            </style>
+
+
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+        </div>
+
+
+      </div>
+    </section>
+
+  </body>
+<style>
+    body{
+        background-color: lightcyan;
+    }
+</style>
+</html>
+

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!-- This is to display the progress for a particular delivery date -->
+    <!-- This is to display the form for filling out donations-->
+    <form action = "" method = "POST" >
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" name = "Submit">
+    </form>
+{% block content %}
+{% endblock %}
+</body>
+</html>

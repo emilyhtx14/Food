@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+{%  load static %}
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="FoodSavers">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Log In</title>
+    <link rel="stylesheet" href="{% static "foodDonation1/nicepage.css" %}" media="screen">
+    <link rel="stylesheet" href="{% static "foodDonation1/Log-In.css" %}" media="screen">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <script class="u-script" type="text/javascript" src="{% static "foodDonation1/jquery.js" %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static "foodDonation1/nicepage.js" %}" defer=""></script>
+    <meta name="generator" content="Nicepage 3.3.3, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "foodSavers",
+		"url": "index.html"
+}</script>
+    <meta property="og:title" content="Log In">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#478ac9">
+    <link rel="canonical" href="index.html">
+    <meta property="og:url" content="index.html">
+  </head>
+  <body class="u-body"><header class="u-clearfix u-header u-header" id="sec-e236"><div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-text u-text-palette-1-base u-text-1">
+          <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="https://hackdavis.io/">FoodSavers</a>
+        </h2>
+        <a href="map.html" data-page-id="38178821" class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-palette-1-base u-btn-2">Home<span style="font-weight: 700;"></span>
+        </a>
+        <a href="map.html" data-page-id="38178821" class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-palette-1-base u-btn-3">Profile </a>
+      </div></header>
+    <section class="u-align-center u-clearfix u-section-1" id="sec-724a">
+      <div class="u-clearfix u-sheet u-sheet-1">
+          <h2> Log In</h2>
+          <style>
+              h2{
+                    text-align: center;
+                    font-family:'Poiret One','Lobster';
+                    font-size: 30px;
+                }
+
+          </style>
+        <div class="u-form u-form-1">
+            <form action ="/accounts/login" method = 'POST'>
+
+               {%  csrf_token %}
+                <br>
+                {{ form.as_p }}
+
+                <input type="submit" value = 'Login'/>
+                <br>
+                <br>
+            </form>
+            <style>
+                form{
+                        align-content: center;
+                        background-image: url("https://i.pinimg.com/564x/ea/8e/60/ea8e604696e264c7e45ae37910396a9f.jpg");
+                        width: 100%;
+                        background-color: #ece1f5;
+                        font-weight:500;
+                        border-radius: 20px;
+                        border-width: inherit;
+                        font-family:'Poiret One','Lobster';
+                        font-size: 30px;
+                    }
+            </style>
+        </div>
+      </div>
+    </section>
+  </body>
+<style>
+    #sec-e236{
+        background-image: url("https://wallpaperaccess.com/full/1372156.jpg");
+    }
+    section{
+        background-image: url("https://wallpaperaccess.com/full/1372156.jpg");
+    }
+    div{
+        background-image: url("https://wallpaperaccess.com/full/1372156.jpg");
+    }
+</style>
+</html>
