@@ -7,14 +7,14 @@ FoodSavers is a web application that incentivizes users to donate to local super
 
 
 ### Install virtualenv
-    cd webXdance
+    cd Food
     brew install python3
     sudo pip3 install virtualenv
     source venv/bin/active
     pip install Django==3.0
 
 ### Demo
-    cd webXdance/src/djangoProject1
+    cd Food/src/djangoProject1
     python manage.py makemigrations
     python manage.py migrate
     python manage.py runserver
