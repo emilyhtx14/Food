@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 {% load static %}
 {%  load my_templatetag %}
-<html style="font-size: 16px;">
+<html style="font-size: 16px;font-family: 'Poiret One'">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
     <title>List of Deliveries</title>
-    <link rel="stylesheet" href="{%  static "foodDonation1nicepage.css" %}" media="screen">
+    <link rel="stylesheet" href="{%  static "foodDonation1/nicepage.css" %}" media="screen">
     <link rel="stylesheet" href="{% static "foodDonation1/List-of-Deliveries.css"%}" media="screen">
     <script class="u-script" type="text/javascript" src="{% static "foodDonation1/jquery.js" %}" defer=""></script>
     <script class="u-script" type="text/javascript" src="{% static "foodDonation1/nicepage.js" %}"defer=""></script>
@@ -32,7 +32,7 @@
     <meta property="og:url" content="index.html">
   </head>
 
-<body class="u-body"><header class="u-clearfix u-header u-header" id="sec-28d3"><div class="u-clearfix u-sheet u-sheet-1">
+<body>
 
 <!-- delivery maps the {delivery date: [total donation amt., total goal amt.]} -->
         <h3 class="u-text u-text-palette-1-base u-text-1">
@@ -73,28 +73,29 @@
                                     font-weight: 500;
                                     border-radius: 20px;
                                     font-family: 'Poiret One', 'Lobster';
-                                    font-size: 40px;
+                                    font-size: 30px;
                                 }
                                 h5{
                                     font-family:'Poiret One','Lobster';
-                                    font-size: 40px;
+                                    font-size: 30px;
                                     font-weight: 500;
                                 }
-                            }
+
                             </style>
                             <p1>
                                 <br>Cumulative Amount Achieved By All Users: ${{ val }}
                                 <br>Goal Amount: ${{ val1 }}
                                 <br>
-                                 <label for="file">Progress:</label>
+                                 <label for="file">Community Progress: {{ val|divide:val1 }}%</label>
+                                <br>
                                  <progress id="file" value={{ val|divide:val1 }} max="100"> 80% </progress>
                             <br>
                             </p1>
                             <style>
                                 p1{
                                         font-family:'Poiret One','Lobster';
-                                        font-size: 40px;
-                                        font-weight: 500;
+                                        font-size: 30px;
+                                        font-weight: 700;
                                     }
                             </style>
 

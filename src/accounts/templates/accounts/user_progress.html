@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,4 +12,138 @@
     <br> Total Meals: {{ total_meals }}
     <br> Hunger-Free Days: {{ hunger_free }}
 </body>
+</html> -->
+
+<!DOCTYPE html>
+{% load static %}
+<html style="font-size: 16px; font-family:'Poiret One'">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="2021 Overview, Impact">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Profile</title>
+      <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{%  static "foodDonation1/nicepage.css" %}" media="screen">
+    <link rel="stylesheet" href="{%  static "foodDonation1/Profile.css" %}" media="screen">
+    <script class="u-script" type="text/javascript" src="{% static "foodDonation1/jquery.js" %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static "foodDonation1/nicepage.js" %}" defer=""></script>
+    <meta name="generator" content="Nicepage 3.3.3, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+
+
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"url": "index.html"
+}</script>
+    <meta property="og:title" content="Profile">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#478ac9">
+    <link rel="canonical" href="index.html">
+    <meta property="og:url" content="index.html">
+  </head>
+
+  <body>
+        <h3>
+          <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1"
+             href="https://www.google.com/maps/place/Trader+Joe's/@38.5501343,
+             -121.7499292,11.44z/data=!3m1!5s0x808529ab8fb6cec7:0xead60e5691fc64dc!4m8!1m2!2m1!
+             1ssupermarkets+near+uc+davis!3m4!1s0x808529a96442a3dd:0x5d50ca121a637c80!8m2!3d38.5467319!4d-
+             121.7614861?hl=en-CN">FoodSaver</a>
+        </h3>
+      <style>
+          h3{
+              font-family: "Poiret One";
+          }
+      </style>
+       <div1>
+        <a href=# class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-2"> Home</a>
+        <a href=# class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-3"> Profile: {{ username }}</a>
+      </div1>
+        <style>
+        </style>
+        </header>
+    <section class="u-clearfix u-section-1" id="sec-5a64">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2> Hello {{ username }}, let's look at your year in summary...</h2>
+          <style>
+              h2{
+                  font-family: "Poiret One";
+              }
+          </style>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-section-2" id="sec-d6f9">
+      <div class="u-clearfix u-sheet u-valign-bottom u-sheet-1">
+        <div class="u-list u-repeater u-list-1">
+          <div class="u-align-center u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1"><span class="u-file-icon u-icon u-icon-circle u-icon-1"><img src="{% static "foodDonation1/ScreenShot2021-01-18at12.37.37AM.png" %}" alt=""></span>
+              <h3 class="u-text u-text-1">Contribution:<br> ${{total_donated }}
+              </h3>
+            </div>
+          </div>
+          <div class="u-align-center u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2"><span class="u-file-icon u-icon u-icon-circle u-icon-2">
+                <img src="{% static "foodDonation1/ScreenShot2021-01-18at12.37.40AM.png" %}"alt=""></span>
+              <h3 class="u-text u-text-2">Deliveries:<br>{{ total_deliveries }}
+              </h3>
+            </div>
+          </div>
+          <div class="u-align-center u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
+                <span class="u-file-icon u-icon u-icon-circle u-icon-3">
+                    <img src="{% static "foodDonation1/ScreenShot2021-01-18at12.37.46AM.png" %}" alt=""></span>
+              <h3 class="u-text u-text-3">Rewards:<br>+ ${{ total_rewards }}
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-3" id="sec-763d">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-text u-text-1">Impact</h2>
+        <div class="u-container-style u-grey-5 u-group u-group-1">
+          <div class="u-container-layout u-container-layout-1">
+            <p class="u-align-center u-text u-text-2">
+              <span class="u-text-palette-2-base">Environment:&nbsp;</span>
+              <br>1.15 tons saved = 0.2 elephants
+            </p>
+          </div>
+        </div>
+        <div class="u-container-style u-grey-5 u-group u-group-2">
+          <div class="u-container-layout u-container-layout-2">
+            <p class="u-align-center u-text u-text-3">
+              <span class="u-text-palette-2-base">People:&nbsp;</span>
+              <br>{{ total_meals }} meals fed =  {{ hunger_free }} hunger-free days
+            </p>
+          </div>
+        </div>
+        <img src="{% static "foodDonation1/ScreenShot2021-01-18at12.46.59AM.png" %}" alt="" class="u-image u-image-default u-image-1" data-image-width="1034" data-image-height="110">
+      </div>
+    </section>
+  <style>
+      section{
+           font-family:'Poiret One'
+      }
+      div{
+
+           font-family:'Poiret One'
+
+      }
+  </style>
+  </body>
+<style>
+    body{
+        background-color: #eafdfc;
+    }
+    #sec-28d3
+    {
+        font-family:"Poiret One"
+    }
+
+</style>
 </html>
